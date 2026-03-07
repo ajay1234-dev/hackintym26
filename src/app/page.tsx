@@ -1,0 +1,23 @@
+import { Hero } from "@/components/sections/Hero";
+import { About } from "@/components/sections/About";
+import { AboutMSIIC } from "@/components/sections/AboutMSIIC";
+import { Tracks } from "@/components/sections/Tracks";
+import { Timeline } from "@/components/sections/Timeline";
+import { FAQ } from "@/components/sections/FAQ";
+import { Team } from "@/components/sections/Team";
+import { Contact } from "@/components/sections/Contact";
+
+export default function Home() {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Hero />
+      <About />
+      <AboutMSIIC />
+      <Tracks />
+      <Timeline />
+      <FAQ />
+      <Team />
+      <Contact />
+    </div>
+  );
+}
