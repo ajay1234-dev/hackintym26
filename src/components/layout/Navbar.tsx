@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Menu, X, Terminal } from 'lucide-react';
-import { Button } from '../ui/Button';
-import { usePathname } from 'next/navigation';
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { Menu, X, Terminal } from "lucide-react";
+import { Button } from "../ui/Button";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/#about' },
-  { name: 'Tracks', href: '/#tracks' },
-  { name: 'Timeline', href: '/#timeline' },
-  { name: 'Prizes', href: '/#prizes' },
-  { name: 'FAQ', href: '/#faq' },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/#about" },
+  { name: "Tracks", href: "/#tracks" },
+  { name: "Timeline", href: "/#timeline" },
+  { name: "Prizes", href: "/#prizes" },
+  { name: "FAQ", href: "/#faq" },
 ];
 
 export function Navbar() {
@@ -24,14 +24,14 @@ export function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'glass py-3' : 'bg-transparent py-5'
+        isScrolled ? "glass py-3" : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,20 +46,24 @@ export function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
+              <Link
+                key={link.name}
                 href={link.href}
                 className="text-sm font-medium text-gray-300 hover:text-white hover:text-shadow-neon transition-colors"
               >
                 {link.name}
               </Link>
             ))}
-            
-            {pathname !== '/register' && (
-              <Link href="/register">
-                <Button variant="primary" size="sm">Register Now</Button>
-              </Link>
-            )}
+
+            <a
+              href="https://forms.gle/6BsFMstYhmA4P7es7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="primary" size="sm">
+                Register Now
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -68,7 +72,11 @@ export function Navbar() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-gray-300 hover:text-white p-2"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -88,12 +96,19 @@ export function Navbar() {
                 {link.name}
               </Link>
             ))}
-            
-            {pathname !== '/register' && (
+
+            {pathname !== "/register" && (
               <div className="px-3 pt-4">
-                <Link href="/register" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Button variant="primary" className="w-full">Register Now</Button>
-                </Link>
+                <a
+                  href="https://forms.gle/6BsFMstYhmA4P7es7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <Button variant="primary" className="w-full">
+                    Register Now
+                  </Button>
+                </a>
               </div>
             )}
           </div>

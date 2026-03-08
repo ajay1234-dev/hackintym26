@@ -34,7 +34,6 @@ export function AboutMSIIC() {
       </div>
 
       <div className="flex flex-col lg:flex-row gap-12 items-center">
-        {/* MSIIC Poster Frame - Will appear above text on Mobile as it's first in the DOM row */}
         <div className="lg:w-1/2 flex justify-center lg:justify-start">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -44,7 +43,6 @@ export function AboutMSIIC() {
             transition={{ duration: 0.5 }}
             className="w-full max-w-lg rounded-[30px] p-2 bg-white/5 border border-hack-neonCyan/40 shadow-[0_0_25px_rgba(34,197,94,0.4)] backdrop-blur-md flex items-center justify-center shrink-0"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/posters/msiic.png" alt="MSIIC Poster" className="w-full h-auto rounded-2xl block" />
           </motion.div>
         </div>
