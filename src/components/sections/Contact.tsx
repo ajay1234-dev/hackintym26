@@ -41,8 +41,8 @@ export function Contact() {
             </div>
             <h3 className="text-white font-bold text-lg mb-2">Email Us</h3>
             <p className="text-gray-400 text-sm mb-4">For general queries.</p>
-            <a href="mailto:hello@hackintym.com" className="text-hack-neonCyan font-medium hover:underline flex items-center gap-1">
-              hello@hackintym.com <ExternalLink size={14} />
+            <a href="mailto:msec.devdynastyclub@gmail.com" className="text-hack-neonCyan font-medium hover:underline flex items-center gap-1">
+              msec.devdynastyclub@gmail.com <ExternalLink size={14} />
             </a>
           </Card>
         </motion.div>
@@ -59,8 +59,8 @@ export function Contact() {
             </div>
             <h3 className="text-white font-bold text-lg mb-2">Call Us</h3>
             <p className="text-gray-400 text-sm mb-4">Mon-Fri from 9am to 6pm.</p>
-            <a href="tel:+919876543210" className="text-hack-neonPurple font-medium hover:underline">
-              +91 98765 43210
+            <a href="tel:+916381846882" className="text-hack-neonPurple font-medium hover:underline">
+              +91 63818 46882
             </a>
           </Card>
         </motion.div>
@@ -77,7 +77,7 @@ export function Contact() {
             </div>
             <h3 className="text-white font-bold text-lg mb-2">Venue</h3>
             <p className="text-gray-400 text-sm mb-4">Comman Computer Centre 1,3rd Floor,Main Campus.</p>
-            <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="text-hack-neonBlue font-medium hover:underline flex items-center gap-1">
+            <a href="https://maps.app.goo.gl/Y2KbX2rintpwNVaBA" target="_blank" rel="noreferrer" className="text-hack-neonBlue font-medium hover:underline flex items-center gap-1">
               View on Map <ExternalLink size={14} />
             </a>
           </Card>

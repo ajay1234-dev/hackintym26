@@ -16,10 +16,8 @@ export function Hero() {
   });
 
   useEffect(() => {
-    // Set hackathon date to 30 days from now for demo purposes
-    const hackathonDate = new Date();
-    hackathonDate.setDate(hackathonDate.getDate() + 30);
-    hackathonDate.setHours(10, 0, 0, 0);
+    // Set hackathon date to April 11, 2026, 10:00 AM
+    const hackathonDate = new Date("2026-04-11T10:00:00");
 
     const timer = setInterval(() => {
       const now = new Date();
@@ -33,6 +31,7 @@ export function Hero() {
           seconds: Math.floor((difference / 1000) % 60),
         });
       } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
         clearInterval(timer);
       }
     }, 1000);
@@ -64,12 +63,31 @@ export function Hero() {
         </motion.div>
 
         <motion.h1
-          className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]"
+          className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          HACK<span className="text-gradient">IN</span>TYM 26
+          <motion.span
+            initial={{ backgroundPosition: "0% 50%" }}
+            animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+            transition={{ backgroundPosition: { duration: 6, repeat: Infinity, ease: "easeInOut" } }}
+            style={{
+              backgroundImage: "linear-gradient(90deg, #facc15, #3b82f6, #9ca3af, #facc15, #3b82f6)",
+              backgroundSize: "200% auto",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              color: "transparent",
+              display: "inline-block"
+            }}
+          >
+            HACKINTYM
+          </motion.span>
+          {" "}
+          <span className="text-[#4ade80] drop-shadow-[0_0_15px_rgba(74,222,128,0.5)]">
+            26
+          </span>
         </motion.h1>
 
         {/* Club Logos */}

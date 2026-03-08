@@ -3,6 +3,7 @@ import { About } from "@/components/sections/About";
 import { AboutMSIIC } from "@/components/sections/AboutMSIIC";
 import { Tracks } from "@/components/sections/Tracks";
 import { Timeline } from "@/components/sections/Timeline";
+import { Prizes } from "@/components/sections/Prizes";
 import { FAQ } from "@/components/sections/FAQ";
 import { Team } from "@/components/sections/Team";
 import { Contact } from "@/components/sections/Contact";
@@ -15,6 +16,7 @@ export default function Home() {
       <AboutMSIIC />
       <Tracks />
       <Timeline />
+      <Prizes />
       <FAQ />
       <Team />
       <Contact />

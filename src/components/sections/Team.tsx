@@ -3,87 +3,87 @@
 import React from "react";
 import { Section } from "../ui/Section";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { Card } from "../ui/Card";
 
 const devDynastyTeam = [
   {
     name: "Ajay Singh I",
     role: "President",
-    image: "https://i.pravatar.cc/300?img=11",
+    image: "/photos/ajay.jpeg",
     socials: { linkedin: "#", twitter: "#" },
   },
   {
     name: "Aswin VK",
     role: "Vice President",
-    image: "https://i.pravatar.cc/300?img=5",
-    socials: { linkedin: "#", github: "#", twitter: "#" },
+    image: "/photos/aswin.jpeg",
+    socials: { linkedin: "https://www.linkedin.com/in/vk-aswin-0922462a2?utm_source=share_via&utm_content=profile&utm_medium=member_android", github: "#", twitter: "#" },
   },
   {
     name: "Shreya ",
     role: "Secretary",
-    image: "https://i.pravatar.cc/300?img=9",
-    socials: { linkedin: "#", github: "#" },
+    image: "/photos/shreya.jpeg",
+    socials: { linkedin: "https://www.linkedin.com/in/shreya-sonpavane-2b2b152a1/", github: "#" },
   },
   {
     name: "Dharun Kumar SK",
     role: "Treasurer",
-    image: "https://i.pravatar.cc/300?img=15",
-    socials: { linkedin: "#", twitter: "#" },
+    image: "/photos/dharun.jpeg",
+    socials: { linkedin: "https://www.linkedin.com/in/dharun-kumar-sh?utm_source=share_via&utm_content=profile&utm_medium=member_android", twitter: "#" },
   },
 ];
 
 const adyantCodingTeam = [
   {
-    name: "Rahul Sharma",
+    name: "Ilakiya Emily Joseph Ignatius ",
     role: "President",
-    image: "https://i.pravatar.cc/300?img=12",
-    socials: { linkedin: "#", github: "#" },
+    image: "/photos/emily.jpeg",
+    socials: { linkedin: "https://www.linkedin.com/in/ilakiya-emily-joseph-ignatius-46ab21291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app", github: "#" },
   },
   {
-    name: "Priya Patel",
+    name: "Lakshwin Krishna Reddy ",
     role: "Vice President",
-    image: "https://i.pravatar.cc/300?img=20",
-    socials: { linkedin: "#", github: "#" },
+    image: "/photos/Lak.PNG",
+    socials: { linkedin: "https://www.linkedin.com/in/lakshwinkrishna?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app", github: "#" },
   },
   {
-    name: "Arjun Reddy",
+    name: "Nishanth N",
     role: "Secretary",
-    image: "https://i.pravatar.cc/300?img=33",
-    socials: { linkedin: "#", github: "#" },
+    image: "/photos/nish.jpeg",
+    socials: { linkedin: "https://www.linkedin.com/in/varshikha-ponnambalam-b256662a2", github: "#" },
   },
   {
-    name: "Sneha Gupta",
+    name: "Dhiviyashree S",
     role: "Treasurer",
-    image: "https://i.pravatar.cc/300?img=25",
-    socials: { linkedin: "#", github: "#" },
+    image: "/photos/dhivya.jpeg",
+    socials: { linkedin: " https://www.linkedin.com/in/dhiviyashree-saravanan-117b202a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app", github: "#" },
   },
 ];
 
 const aiEpochTeam = [
   {
-    name: "Meera Nair",
+    name: "Saidharan Y ",
     role: "President",
-    image: "https://i.pravatar.cc/300?img=28",
-    socials: { linkedin: "#", github: "#" },
+    image: "/photos/sai.jpeg",
+    socials: { linkedin: "https://www.linkedin.com/in/saidharan17?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "#" },
   },
   {
-    name: "Karthik P",
+    name: "Dakshineshwar A",
     role: "Vice President",
-    image: "https://i.pravatar.cc/300?img=45",
-    socials: { linkedin: "#", github: "#" },
+    image: "/photos/dakshin.jpeg",
+    socials: { linkedin: "https://www.linkedin.com/in/dakshin-a-616b112a1/", github: "#" },
   },
   {
-    name: "Ananya Das",
+   name: "Varshikha P",
     role: "Secretary",
-    image: "https://i.pravatar.cc/300?img=32",
-    socials: { linkedin: "#", github: "#" },
+    image: "/photos/varshi.jpeg",
+    socials: { linkedin: "https://www.linkedin.com/in/varshikha-ponnambalam-b256662a2", github: "#" },
   },
   {
-    name: "Vikram Singh",
+    name: "Nithya Sri S",
     role: "Treasurer",
-    image: "https://i.pravatar.cc/300?img=51",
-    socials: { linkedin: "#", github: "#" },
+    image: "/photos/nithiya.jpeg",
+    socials: { linkedin: "https://www.linkedin.com/in/nithyasri11", github: "#" },
   },
 ];
 
@@ -147,25 +147,11 @@ function TeamSection({
                 {member.socials.linkedin && (
                   <a
                     href={member.socials.linkedin}
+                    target={member.socials.linkedin !== "#" ? "_blank" : undefined}
+                    rel={member.socials.linkedin !== "#" ? "noopener noreferrer" : undefined}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     <Linkedin size={18} />
-                  </a>
-                )}
-                {member.socials.github && (
-                  <a
-                    href={member.socials.github}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    <Github size={18} />
-                  </a>
-                )}
-                {member.socials.twitter && (
-                  <a
-                    href={member.socials.twitter}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    <Twitter size={18} />
                   </a>
                 )}
               </div>

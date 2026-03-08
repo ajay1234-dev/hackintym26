@@ -25,8 +25,8 @@ export function Footer() {
             </p>
             <div className="flex gap-4 pt-2">
               <a href="#" className="text-gray-400 hover:text-hack-neonCyan transition-colors"><Twitter size={20} /></a>
-              <a href="#" className="text-gray-400 hover:text-hack-neonPurple transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="text-gray-400 hover:text-hack-neonBlue transition-colors"><Linkedin size={20} /></a>
+              <a href="https://www.instagram.com/msec_devdynasty?igsh=MWtzcTBwbHFnc2RpOA==" className="text-gray-400 hover:text-hack-neonPurple transition-colors"><Instagram size={20} /></a>
+              <a href="https://www.linkedin.com/in/msec-devdynasty?utm_source=share_via&utm_content=profile&utm_medium=member_android" className="text-gray-400 hover:text-hack-neonBlue transition-colors"><Linkedin size={20} /></a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors"><Github size={20} /></a>
             </div>
           </div>
@@ -56,11 +56,11 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="text-hack-neonCyan w-5 h-5 shrink-0 mt-0.5" />
-                <span className="text-gray-400 text-sm">University Campus, Tech Block, City, State 12345</span>
+                <span className="text-gray-400 text-sm">363, Arcot Road, Puliyur 1st Main Rd, Subedar Colony, Kodambakkam, Chennai, Tamil Nadu 600024</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-hack-neonCyan w-5 h-5 shrink-0" />
-                <a href="mailto:hello@hackintym.com" className="text-gray-400 hover:text-white transition-colors text-sm">hello@hackintym.com</a>
+                <a href="mailto:msec.devdynastyclub@gmail.com" className="text-gray-400 hover:text-white transition-colors text-sm">msec.devdynastyclub@gmail.com</a>
               </li>
             </ul>
           </div>
