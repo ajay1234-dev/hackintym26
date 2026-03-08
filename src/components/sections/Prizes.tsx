@@ -36,7 +36,7 @@ const prizes = [
   }
 ];
 
-const specialPrizes = [
+const specialPrizes: any[] = [
   
 ];
 
