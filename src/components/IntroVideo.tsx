@@ -38,12 +38,12 @@ export function IntroVideo() {
               initial={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="absolute inset-0 flex flex-col items-center justify-center"
+              className="absolute inset-0 flex flex-col items-center justify-center bg-black"
             >
               <img
                 src="/photos/intro.jpeg"
                 alt="Hackintym Intro"
-                className="absolute inset-0 w-full h-full object-cover opacity-60"
+                className="absolute inset-0 w-full h-full object-contain opacity-60"
               />
               <div className="absolute inset-0 bg-black/40" />
               <button
@@ -56,22 +56,20 @@ export function IntroVideo() {
           )}
 
           {stage === "video" && (
-            <motion.div
-              key="intro-video"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="absolute inset-0 flex items-center justify-center overflow-hidden"
-            >
-              <video
+            <div className="absolute inset-0 flex items-center justify-center bg-black">
+              <motion.video
+                key="intro-video"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
                 src="/video/intro.mp4"
-                className="object-cover w-full h-full portrait:w-[100vh] portrait:h-[100vw] portrait:-rotate-90 transform origin-center max-w-none max-h-none"
+                className="w-full h-full object-contain"
                 autoPlay
                 playsInline
                 muted={false}
                 onEnded={handleVideoEnd}
               />
-            </motion.div>
+            </div>
           )}
         </motion.div>
       )}
