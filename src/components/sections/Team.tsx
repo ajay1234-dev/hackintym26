@@ -64,7 +64,7 @@ const aiEpochTeam = [
   {
     name: "Saidharan Y ",
     role: "President",
-    image: "/photos/sai.jpeg",
+    image: "/photos/Sai.jpeg",
     socials: { linkedin: "https://www.linkedin.com/in/saidharan17?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "#" },
   },
   {
