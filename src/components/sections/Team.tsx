@@ -127,12 +127,12 @@ function TeamSection({
             transition={{ duration: 0.4, delay: i * 0.1 }}
           >
             <Card className="flex flex-col items-center text-center p-6 group hover:border-hack-neonPurple/50">
-              <div className="w-40 h-40 xl:w-48 xl:h-48 rounded-2xl overflow-hidden mb-6 relative p-1 bg-gradient-to-br from-hack-neonCyan to-hack-neonPurple">
-                <div className="w-full h-full rounded-2xl overflow-hidden border-4 border-hack-darkBg relative z-10">
+              <div className="w-32 h-32 rounded-full overflow-hidden mb-6 relative p-1 bg-gradient-to-br from-hack-neonCyan to-hack-neonPurple">
+                <div className="w-full h-full rounded-full overflow-hidden border-4 border-hack-darkBg relative z-10">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
               </div>

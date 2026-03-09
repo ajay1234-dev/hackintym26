@@ -84,7 +84,7 @@ export function Navbar() {
 
       {/* Mobile Nav */}
       {isMobileMenuOpen && (
-        <div className="md:hidden glass border-t border-white/10 absolute top-full left-0 w-full animate-in slide-in-from-top-2">
+        <div className="md:hidden bg-[#02120a] border-t border-white/10 absolute top-full left-0 w-full animate-in slide-in-from-top-2">
           <div className="px-4 pt-2 pb-6 space-y-1 flex flex-col">
             {navLinks.map((link) => (
               <Link
