@@ -64,14 +64,13 @@ export function Hero() {
 
         <motion.h1
           className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
         >
-          <motion.span
-            initial={{ backgroundPosition: "0% 50%" }}
-            animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-            transition={{ backgroundPosition: { duration: 6, repeat: Infinity, ease: "easeInOut" } }}
+          <span
+            className="animate-gradient-x"
             style={{
               backgroundImage: "linear-gradient(90deg, #facc15, #3b82f6, #9ca3af, #facc15, #3b82f6)",
               backgroundSize: "200% auto",
@@ -83,7 +82,7 @@ export function Hero() {
             }}
           >
             HACKINTYM
-          </motion.span>
+          </span>
           {" "}
           <span className="text-[#4ade80] drop-shadow-[0_0_15px_rgba(74,222,128,0.5)]">
             26
@@ -93,9 +92,10 @@ export function Hero() {
         {/* Club Logos */}
         <motion.div
           className="flex justify-center items-center gap-6 mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.15 }}
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.1 }}
         >
           {[1, 2, 3].map((num) => (
             <div
@@ -105,7 +105,8 @@ export function Hero() {
               <img
                 src={`/clubs/club${num}.png`}
                 alt={`Club ${num}`}
-                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity transform-gpu"
+                loading="lazy"
               />
             </div>
           ))}
@@ -114,17 +115,19 @@ export function Hero() {
         <motion.p
           className="text-xl md:text-3xl text-gray-300 font-light mb-10 text-balance"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.2 }}
         >
           <span className="text-white font-medium">30 Hour Hackathon</span>
         </motion.p>
         {/* Countdown Timer */}
         <motion.div
           className="flex justify-center gap-4 md:gap-8 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.25 }}
         >
           {[
             { label: "Days", value: timeLeft.days },
@@ -134,7 +137,7 @@ export function Hero() {
           ].map((item) => (
             <div key={item.label} className="flex flex-col items-center">
               <div className="w-16 h-16 md:w-24 md:h-24 glass-card flex items-center justify-center rounded-xl md:rounded-2xl mb-2 border-white/20">
-                <span className="text-2xl md:text-5xl font-bold font-mono text-white text-shadow-neon">
+                <span className="text-2xl md:text-5xl font-bold font-mono text-white text-shadow-neon tabular-nums">
                   {item.value.toString().padStart(2, "0")}
                 </span>
               </div>

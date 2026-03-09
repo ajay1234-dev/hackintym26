@@ -73,20 +73,14 @@ export function Prizes() {
             
             {/* Dynamic Geometric Rings Animation */}
             <div className="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none overflow-hidden">
-               <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                  className="w-[800px] h-[800px] border-dashed border-2 border-hack-neonCyan/40 rounded-full absolute"
+               <div
+                  className="w-[800px] h-[800px] border-dashed border-2 border-hack-neonCyan/40 rounded-full absolute animate-[spin_30s_linear_infinite]"
                />
-               <motion.div
-                  animate={{ rotate: -360 }}
-                  transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-                  className="w-[600px] h-[600px] border border-hack-neonPurple/30 rounded-full absolute"
+               <div
+                  className="w-[600px] h-[600px] border border-hack-neonPurple/30 rounded-full absolute animate-[spin_40s_linear_infinite_reverse]"
                />
-               <motion.div
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="w-[400px] h-[400px] border border-hack-neonBlue/50 rounded-full absolute"
+               <div
+                  className="w-[400px] h-[400px] border border-hack-neonBlue/50 rounded-full absolute animate-pulse"
                />
             </div>
 

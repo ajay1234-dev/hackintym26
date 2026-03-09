@@ -121,18 +121,19 @@ function TeamSection({
         {members.map((member, i) => (
           <motion.div
             key={member.name}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.4, delay: i * 0.1 }}
           >
-            <Card className="flex flex-col items-center text-center p-6 group hover:border-hack-neonPurple/50">
+            <Card className="flex flex-col items-center text-center p-6 group hover:border-hack-neonPurple/50 transition-colors">
               <div className="w-32 h-32 rounded-full overflow-hidden mb-6 relative p-1 bg-gradient-to-br from-hack-neonCyan to-hack-neonPurple">
-                <div className="w-full h-full rounded-full overflow-hidden border-4 border-hack-darkBg relative z-10">
+                <div className="w-full h-full rounded-full overflow-hidden border-4 border-hack-darkBg relative z-10 bg-hack-darkBg">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 transform-gpu"
                   />
                 </div>
               </div>

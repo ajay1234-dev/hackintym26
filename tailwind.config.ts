@@ -29,6 +29,21 @@ const config: Config = {
       boxShadow: {
         neonCyan: "0 0 10px rgba(74, 222, 128, 0.5), 0 0 20px rgba(74, 222, 128, 0.3)",
         neonPurple: "0 0 10px rgba(34, 197, 94, 0.5), 0 0 20px rgba(34, 197, 94, 0.3)",
+      },
+      keyframes: {
+        "gradient-x": {
+          "0%, 100%": {
+            "background-size": "200% 200%",
+            "background-position": "left center"
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center"
+          }
+        }
+      },
+      animation: {
+        "gradient-x": "gradient-x 6s ease-in-out infinite"
       }
     },
   },
