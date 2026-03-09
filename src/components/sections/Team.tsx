@@ -20,7 +20,7 @@ const devDynastyTeam = [
     socials: { linkedin: "https://www.linkedin.com/in/vk-aswin-0922462a2?utm_source=share_via&utm_content=profile&utm_medium=member_android", github: "#", twitter: "#" },
   },
   {
-    name: "Shreya ",
+    name: "Shreya Sonpavane",
     role: "Secretary",
     image: "/photos/shreya.jpeg",
     socials: { linkedin: "https://www.linkedin.com/in/shreya-sonpavane-2b2b152a1/", github: "#" },
