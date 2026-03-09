@@ -56,18 +56,22 @@ export function IntroVideo() {
           )}
 
           {stage === "video" && (
-            <motion.video
+            <motion.div
               key="intro-video"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              src="/video/intro.mp4"
-              className="w-full h-full object-cover"
-              autoPlay
-              playsInline
-              muted={false}
-              onEnded={handleVideoEnd}
-            />
+              className="absolute inset-0 flex items-center justify-center overflow-hidden"
+            >
+              <video
+                src="/video/intro.mp4"
+                className="object-cover w-full h-full portrait:w-[100vh] portrait:h-[100vw] portrait:-rotate-90 transform origin-center max-w-none max-h-none"
+                autoPlay
+                playsInline
+                muted={false}
+                onEnded={handleVideoEnd}
+              />
+            </motion.div>
           )}
         </motion.div>
       )}
