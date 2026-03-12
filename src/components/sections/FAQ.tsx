@@ -8,11 +8,11 @@ import { ChevronDown } from 'lucide-react';
 const faqs = [
   {
     question: "Who can participate?",
-    answer: "HACKINTYM 26 is open to all university students (undergraduates and postgraduates) from any background. You must be at least 18 years old or have parental consent to participate."
+    answer: "HACKINTYM 26 is open to all MSEC students (undergraduates) from any background. You must be at least 18 years old or have parental consent to participate."
   },
   {
     question: "What is the team size?",
-    answer: "You can form a team of 2 to 4 members. We highly encourage cross-disciplinary teams (e.g., developers, designers, and business students)."
+    answer: "You can form a team of 4 members. We highly encourage cross-disciplinary teams (e.g., ECE,IT,AIDS,CIVIL,....)."
   },
   {
     question: "Is it online or offline?",
@@ -20,15 +20,15 @@ const faqs = [
   },
   {
     question: "Is there any registration fee?",
-    answer: "No! Registration and participation are completely free. We will also provide food, beverages, and swag during the offline hackathon."
+    answer: "Registration is free for the First online Round,Shortlised Teams Should pay 250 Rs as Registration fees."
   },
   {
     question: "What should we bring?",
-    answer: "Bring your laptop, chargers, any necessary hardware for your project, a valid student ID, and your enthusiasm! Sleeping bags are optional but recommended."
+    answer: "Bring your laptop, chargers, any necessary hardware for your project, a valid student ID, and your enthusiasm!."
   },
   {
     question: "Do I need to have a project idea right now?",
-    answer: "While you don&apos;t need a fully fleshed-out product, you must submit a brief project idea or problem statement your team intends to solve during the registration process to get shortlisted."
+    answer: "While Registering in the Form you need to submit a PPT of our Previous Project or a New problem statement with the respective idea."
   }
 ];
 
