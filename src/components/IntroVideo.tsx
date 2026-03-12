@@ -43,7 +43,7 @@ export function IntroVideo() {
               <img
                 src="/photos/intro.jpeg"
                 alt="Hackintym Intro"
-                className="absolute inset-0 w-full h-full object-contain opacity-60"
+                className="absolute inset-0 w-full h-full object-cover sm:object-contain opacity-60"
               />
               <div className="absolute inset-0 bg-black/40" />
               <button

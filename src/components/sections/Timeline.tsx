@@ -5,14 +5,15 @@ import { Section } from '../ui/Section';
 import { motion } from 'framer-motion';
 
 const timelineEvents = [
-  { time: "April 15, 2026", title: "Registration Opens", description: "Start forming your teams and registering for the hackathon.", status: "completed" },
-  { time: "May 10, 2026", title: "Idea Submission Deadline", description: "Submit your team's project idea for shortlisting.", status: "upcoming" },
-  { time: "May 15, 2026", title: "Team Shortlisting", description: "Announcement of selected teams invited to the hackathon.", status: "upcoming" },
-  { time: "June 05, 2026 - 10:00 AM", title: "Hackathon Starts", description: "Opening ceremony and coding begins! 30 hours on the clock.", status: "upcoming" },
-  { time: "June 05, 2026 - 8:00 PM", title: "First Mentoring Session", description: "Mentors review progress and provide feedback.", status: "upcoming" },
-  { time: "June 06, 2026 - 2:00 PM", title: "Coding Freeze", description: "Stop coding! Finalize your presentations.", status: "upcoming" },
-  { time: "June 06, 2026 - 3:00 PM", title: "Final Presentations", description: "Pitch your product to the judges.", status: "upcoming" },
-  { time: "June 06, 2026 - 6:00 PM", title: "Winners Announced", description: "Closing ceremony and prize distribution.", status: "upcoming" }
+  { time: "March 14, 2026", title: "Registration Opens", description: "Start forming your teams and registering for the hackathon.", status: "completed" },
+  { time: "April 1, 2026", title: "Idea Submission Deadline", description: "Submit your team's project idea for shortlisting.", status: "upcoming" },
+  { time: "April 9, 2026", title: "Team Shortlisting", description: "Announcement of selected teams invited to the hackathon.", status: "upcoming" },
+  { time: "April 18, 2026 - 10:00 AM", title: "Hackathon Starts", description: "Opening ceremony and coding begins! 30 hours on the clock.", status: "upcoming" },
+  { time: "April 18, 2026 - 6:00 PM", title: "First review Session", description: "Problem understanding & idea validation", status: "upcoming" },
+  { time: "April 19, 2026 - 12:00 AM", title: "Second review Session", description: "Prototype & technical progress", status: "upcoming" },
+  { time: "April 19, 2026 - 4:00 AM", title: "Final review Session", description: "Final Product & impact", status: "upcoming" },
+  { time: "April 19, 2026 - 8:00 AM", title: "Filteration of teams", description: "Top 10 Selected teams are annouced", status: "upcoming" },
+  { time: "April 19, 2026 - 10:00 AM", title: "Winners Announced", description: "Closing ceremony and prize distribution.", status: "upcoming" },
 ];
 
 export function Timeline() {
