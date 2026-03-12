@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     question: "Do I need to have a project idea right now?",
-    answer: "While Registering in the Form you need to submit a PPT of our Previous Project or a New problem statement with the respective idea."
+    answer: "While Registering in the Form you need to submit a PPT of your Previous Project or a New problem statement with the respective idea."
   }
 ];
 
