@@ -43,7 +43,7 @@ export function IntroVideo() {
               <img
                 src="/photos/intro.jpeg"
                 alt="Hackintym Intro"
-                className="absolute inset-0 w-full h-full object-cover sm:object-contain opacity-60"
+                className="absolute inset-0 w-full h-full object-cover opacity-60"
               />
               <div className="absolute inset-0 bg-black/40" />
               <button
@@ -63,7 +63,7 @@ export function IntroVideo() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
                 src="/video/intro.mp4"
-                className="w-full h-full object-contain"
+                className="absolute inset-0 w-full h-full object-cover"
                 autoPlay
                 playsInline
                 muted={false}
