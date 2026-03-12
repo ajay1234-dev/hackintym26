@@ -8,8 +8,8 @@ import { Card } from '../ui/Card';
 
 const prizes = [
   {
-    title: "Second Runner Up",
-    amount: "₹3,000",
+    title: "First Runner Up",
+    amount: "₹5,000",
     icon: <Medal className="w-16 h-16 text-[#cd7f32] drop-shadow-[0_0_15px_rgba(205,127,50,0.5)]" />,
     color: "from-[#cd7f32]/20 to-[#a05a2c]/5",
     border: "border-[#cd7f32]/30",
@@ -26,8 +26,8 @@ const prizes = [
     style: "scale-110 z-10 relative"
   },
   {
-    title: "First Runner Up",
-    amount: "₹5,000",
+    title: "Second Runner Up",
+    amount: "₹3,000",
     icon: <Award className="w-16 h-16 text-[#c0c0c0] drop-shadow-[0_0_15px_rgba(192,192,192,0.5)]" />,
     color: "from-[#c0c0c0]/20 to-[#a0a0a0]/5",
     border: "border-[#c0c0c0]/30",
