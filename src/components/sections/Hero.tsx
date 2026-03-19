@@ -16,8 +16,8 @@ export function Hero() {
   });
 
   useEffect(() => {
-    // Set hackathon date to April 11, 2026, 10:00 AM
-    const hackathonDate = new Date("2026-04-11T10:00:00");
+    // Set hackathon date to April 18, 2026, 10:00 AM
+    const hackathonDate = new Date("2026-04-18T10:00:00");
 
     const timer = setInterval(() => {
       const now = new Date();
