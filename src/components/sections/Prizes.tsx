@@ -27,7 +27,7 @@ const prizes = [
   },
   {
     title: "Second Runner Up",
-    amount: "₹3,000",
+    amount: "₹2,500",
     icon: <Award className="w-16 h-16 text-[#c0c0c0] drop-shadow-[0_0_15px_rgba(192,192,192,0.5)]" />,
     color: "from-[#c0c0c0]/20 to-[#a0a0a0]/5",
     border: "border-[#c0c0c0]/30",
