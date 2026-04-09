@@ -7,6 +7,8 @@ import { Prizes } from "@/components/sections/Prizes";
 import { FAQ } from "@/components/sections/FAQ";
 import { Team } from "@/components/sections/Team";
 import { Contact } from "@/components/sections/Contact";
+import { ShortlistedTeams } from "@/components/sections/ShortlistedTeams";
+
 
 export default function Home() {
   return (
@@ -16,6 +18,7 @@ export default function Home() {
       <AboutMSIIC />
       <Tracks />
       <Timeline />
+      <ShortlistedTeams />
       <Prizes />
       <FAQ />
       <Team />

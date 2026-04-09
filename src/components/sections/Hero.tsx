@@ -154,20 +154,16 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <a
-            href="https://forms.gle/6BsFMstYhmA4P7es7"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="/#shortlisted">
             <Button
               size="lg"
               variant="primary"
               className="w-full sm:w-auto min-w-[200px]"
             >
-              Register Now
+              View Shortlisted Teams
             </Button>
           </a>
-          <Link href="#about">
+          <a href="/#about">
             <Button
               size="lg"
               variant="outline"
@@ -175,7 +171,7 @@ export function Hero() {
             >
               Learn More
             </Button>
-          </Link>
+          </a>
         </motion.div>
       </div>
     </Section>

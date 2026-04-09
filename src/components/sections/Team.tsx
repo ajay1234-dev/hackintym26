@@ -111,7 +111,7 @@ function TeamSection({
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-gray-400 max-w-2xl mx-auto"
+          className="text-gray-200 max-w-2xl mx-auto"
         >
           {description}
         </motion.p>
@@ -150,7 +150,7 @@ function TeamSection({
                     href={member.socials.linkedin}
                     target={member.socials.linkedin !== "#" ? "_blank" : undefined}
                     rel={member.socials.linkedin !== "#" ? "noopener noreferrer" : undefined}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-200 hover:text-white transition-colors"
                   >
                     <Linkedin size={18} />
                   </a>
@@ -180,7 +180,7 @@ export function Team() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-gray-400 max-w-2xl mx-auto"
+          className="text-gray-200 max-w-2xl mx-auto"
         >
           The dedicated teams working together to make HACKINTYM 26 a reality.
         </motion.p>

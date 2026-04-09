@@ -46,22 +46,18 @@ export function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.name}
                 href={link.href}
                 className="text-sm font-medium text-gray-300 hover:text-white hover:text-shadow-neon transition-colors"
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
 
-            <a
-              href="https://forms.gle/6BsFMstYhmA4P7es7"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/#shortlisted">
               <Button variant="primary" size="sm">
-                Register Now
+                View Teams
               </Button>
             </a>
           </div>
@@ -87,26 +83,25 @@ export function Navbar() {
         <div className="md:hidden bg-[#02120a] border-t border-white/10 absolute top-full left-0 w-full animate-in slide-in-from-top-2">
           <div className="px-4 pt-2 pb-6 space-y-1 flex flex-col">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.name}
                 href={link.href}
                 className="block px-3 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
 
             {pathname !== "/register" && (
               <div className="px-3 pt-4">
                 <a
-                  href="https://forms.gle/6BsFMstYhmA4P7es7"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/#shortlisted"
                   onClick={() => setIsMobileMenuOpen(false)}
+                  className="block"
                 >
                   <Button variant="primary" className="w-full">
-                    Register Now
+                    View Teams
                   </Button>
                 </a>
               </div>
