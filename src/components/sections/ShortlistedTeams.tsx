@@ -35,7 +35,7 @@ const shortlistedTeams: TeamInfo[] = [
   { name: "Scammers", department: "IT", members: ["Kirubakaran H - IT 2yr", "B.Lingeshwar - IT 2yr", "Amritha shree L - IT 2yr", "DIVYA DHARSHINI S - IT 2yr"] },
   { name: "Ctrl Alt Elite", department: "CSE", members: ["Rakkesh S A - CSE 3yr", "Guru Govindh M - CSE 3yr", "Krishna Priya S - CSE 3yr", "Swetha S - CSE 3yr "] },
   { name: "Quantum Coders", department: "CSE", members: ["Gopika K - CSE 3yr", "Mary Kanakam oommen - CSE 3yr", "Monika K.R - CSE 3yr", "Prathik E - CSE 3yr"] },
-  { name: "ZENITH", department: "AI & DS", members: ["Raveendhar K - AI & DS 2yr", "Venkatesan R - AI & DS 2yr", "Eraianbu D - AI & DS 2yr", "Rohith Devavradhan G - 2yr"] },
+  { name: "ZENITH", department: "AI & DS", members: ["Raveendhar K - AI & DS 2yr", "Venkatesan R - AI & DS 2yr", "Eraianbu D - AI & DS 3yr", "Rohith Devavradhan G - AI & DS 3yr"] },
   { name: "SIGMA FUSION", department: "IT", members: ["Pratiksha Shree S - IT 2yr", "Krithika.M - ECE 2yr", "Harini V - ECE  2yr", "Lakshya S - ECE 2yr"] }
 ];
 
