@@ -59,7 +59,7 @@ export default function RevealPage() {
             >
               <ShieldCheck size={14} /> AUTHORIZATION GRANTED
             </motion.div>
-            
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -68,14 +68,14 @@ export default function RevealPage() {
             >
               HACKINTYM'26 <span className="text-hack-green font-outline-2">EVO</span>
             </motion.h1>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="text-gray-400 text-xl md:text-2xl max-w-2xl font-light mb-12"
             >
-              The Arena is Ready. All core systems initialized. 
+              The Arena is Ready. All core systems initialized.
               Waiting for global deployment signal.
             </motion.p>
 
@@ -111,12 +111,12 @@ export default function RevealPage() {
               >
                 <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tight uppercase italic flex items-center justify-center gap-4">
                   <Terminal className="text-hack-green" size={48} />
-                  ENTER THE <span className="text-hack-green text-glow-green">ARENA</span>
+                  ENTER THE <span className="text-hack-green text-glow-green">HACKINTYM'26 EVO</span>
                 </h1>
                 <div className="h-1 w-full bg-gradient-to-r from-transparent via-hack-green to-transparent opacity-50" />
               </motion.div>
               <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-                Authentication successful. Problem statements for HACKINTYM'26 EVO have been declassified. 
+                Problem statements for HACKINTYM'26 EVO have been declassified.
                 Choose your domain wisely hacker.
               </p>
             </div>
