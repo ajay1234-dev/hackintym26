@@ -39,7 +39,7 @@ export function IntroVideo() {
 
   const handleGoToTeams = () => {
     setStage("done");
-    document.getElementById("shortlisted")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("winners")?.scrollIntoView({ behavior: "smooth" });
   };
 
   if (!isMounted || stage === "done") return null;
@@ -54,6 +54,16 @@ export function IntroVideo() {
           transition={{ duration: 0.8, ease: "easeInOut" }}
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black overflow-hidden"
         >
+          {/* Preload Video Hidden */}
+          {stage === "image" && (
+            <video
+              src="/video/intro.mp4"
+              preload="auto"
+              muted
+              style={{ display: 'none' }}
+            />
+          )}
+
           {stage === "image" && (
             <motion.div
               key="intro-image"
@@ -83,11 +93,12 @@ export function IntroVideo() {
                 key="intro-video"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.4 }}
                 src="/video/intro.mp4"
                 className="absolute inset-0 w-full h-full object-cover"
                 autoPlay
                 playsInline
+                preload="auto"
                 muted={false}
                 onEnded={handleVideoEnd}
               />
@@ -106,22 +117,44 @@ export function IntroVideo() {
           className="fixed inset-0 z-[100] flex items-center justify-center p-4 pointer-events-none"
         >
           <div className="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-auto" onClick={() => setStage("done")} />
-          <div className="relative glass-card border border-hack-neonCyan/50 bg-hack-darkBg/95 p-8 md:p-12 rounded-2xl max-w-2xl w-full text-center shadow-[0_0_50px_rgba(74,222,128,0.3)] pointer-events-auto">
+          <div className="relative glass-card border border-hack-neonCyan/50 bg-hack-darkBg/95 p-8 md:p-12 rounded-2xl max-w-2xl w-full text-center shadow-[0_0_50px_rgba(74,222,128,0.3)] pointer-events-auto overflow-hidden">
+            {/* Confetti Burst for Banner */}
+            <div className="absolute inset-0 pointer-events-none">
+              {[...Array(30)].map((_, i) => (
+                <motion.div
+                  key={`confetti-${i}`}
+                  initial={{ opacity: 0, scale: 0, x: "50%", y: "50%" }}
+                  animate={{ 
+                    opacity: [0, 1, 1, 0],
+                    scale: [0, 1.2, 0.8],
+                    x: `${50 + (Math.random() - 0.5) * 100}%`,
+                    y: `${50 + (Math.random() - 0.5) * 100}%`,
+                    rotate: Math.random() * 360
+                  }}
+                  transition={{ 
+                    duration: Math.random() * 2 + 2, 
+                    repeat: Infinity,
+                    repeatDelay: 1
+                  }}
+                  className={`absolute w-2 h-2 ${i % 2 === 0 ? 'bg-hack-neonCyan' : 'bg-yellow-400'} rounded-sm`}
+                />
+              ))}
+            </div>
             <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-hack-neonCyan rounded-full opacity-20 blur-2xl"></div>
             
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
-              The <span className="text-hack-neonCyan text-gradient">Shortlisted Teams</span><br/>Have Been Revealed!
+              The <span className="text-hack-neonCyan text-gradient">Hackathon Winners</span><br/>Have Been Revealed!
             </h2>
             
             <p className="text-gray-300 text-lg mb-8 max-w-xl mx-auto">
-              Phase 1 evaluation is complete. The elite squads securing their spot in the internal hackathon arena have been announced.
+              The battle is over. The elite squads who have conquered the Hackintym'26 EVO arena have been declassified.
             </p>
             
             <button
               onClick={handleGoToTeams}
               className="px-8 py-4 bg-hack-neonCyan/20 hover:bg-hack-neonCyan/40 text-hack-neonCyan font-bold text-lg rounded-full border border-hack-neonCyan backdrop-blur-md shadow-[0_0_20px_rgba(74,222,128,0.3)] hover:shadow-[0_0_40px_rgba(74,222,128,0.6)] transition-all duration-300 transform hover:scale-105 uppercase tracking-widest"
             >
-              View Selected Teams
+              View Winners
             </button>
             
             <button 

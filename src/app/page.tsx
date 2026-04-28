@@ -7,18 +7,18 @@ import { Prizes } from "@/components/sections/Prizes";
 import { FAQ } from "@/components/sections/FAQ";
 import { Team } from "@/components/sections/Team";
 import { Contact } from "@/components/sections/Contact";
-import { ShortlistedTeams } from "@/components/sections/ShortlistedTeams";
+import { WinnersOverlay } from "@/components/ui/WinnersOverlay";
 
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
+      <WinnersOverlay />
       <Hero />
       <About />
       <AboutMSIIC />
       <Tracks />
       <Timeline />
-      <ShortlistedTeams />
       <Prizes />
       <FAQ />
       <Team />

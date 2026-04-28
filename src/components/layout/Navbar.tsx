@@ -55,9 +55,9 @@ export function Navbar() {
               </a>
             ))}
 
-            <a href="/#shortlisted">
+            <a href="/#winners">
               <Button variant="primary" size="sm">
-                View Teams
+                View Winners
               </Button>
             </a>
           </div>
@@ -96,12 +96,12 @@ export function Navbar() {
             {pathname !== "/register" && (
               <div className="px-3 pt-4">
                 <a
-                  href="/#shortlisted"
+                  href="/#winners"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block"
                 >
                   <Button variant="primary" className="w-full">
-                    View Teams
+                    View Winners
                   </Button>
                 </a>
               </div>

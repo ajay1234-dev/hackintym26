@@ -10,41 +10,44 @@ const prizes = [
   {
     title: "First Runner Up",
     amount: "₹5,000",
+    winner: "QUANTUM CODERS (CSE)",
     icon: <Medal className="w-16 h-16 text-[#cd7f32] drop-shadow-[0_0_15px_rgba(205,127,50,0.5)]" />,
     color: "from-[#cd7f32]/20 to-[#a05a2c]/5",
     border: "border-[#cd7f32]/30",
-    delay: 0.3,
-    style: "mt-12"
+    delay: 0.6,
+    style: "mt-12 order-2 md:order-1"
   },
   {
     title: "Grand Prize Winner",
     amount: "₹7,500",
+    winner: "INNOVISION (EEE)",
     icon: <Trophy className="w-24 h-24 text-[#ffd700] drop-shadow-[0_0_20px_rgba(255,215,0,0.6)]" />,
     color: "from-[#ffd700]/20 to-[#c5a000]/5",
     border: "border-[#ffd700]/50",
-    delay: 0.1,
-    style: "scale-110 z-10 relative"
+    delay: 0.8,
+    style: "scale-110 z-10 relative order-1 md:order-2"
   },
   {
     title: "Second Runner Up",
     amount: "₹2,500",
+    winner: "THE GRIX (AIDS)",
     icon: <Award className="w-16 h-16 text-[#c0c0c0] drop-shadow-[0_0_15px_rgba(192,192,192,0.5)]" />,
     color: "from-[#c0c0c0]/20 to-[#a0a0a0]/5",
     border: "border-[#c0c0c0]/30",
-    delay: 0.2,
-    style: "mt-12"
+    delay: 1.0,
+    style: "mt-12 order-3"
   }
 ];
 
 const specialPrizes: any[] = [
-  
+
 ];
 
 export function Prizes() {
   return (
     <Section id="prizes">
       <div className="text-center mb-20 relative z-10">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -58,48 +61,48 @@ export function Prizes() {
       {/* Massive Prize Pool Hero Card */}
       <div className="flex justify-center mb-24 max-w-5xl mx-auto px-4">
         <motion.div
-           initial={{ opacity: 0, scale: 0.8 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           viewport={{ once: true }}
-           transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
-           className="w-full relative group"
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+          className="w-full relative group"
         >
 
           <div className="relative glass-card border-hack-neonCyan/30 p-6 sm:p-10 md:p-16 rounded-[2rem] bg-hack-darkBg/80 overflow-hidden flex flex-col items-center justify-center text-center">
-            
+
             {/* Corner Accents */}
             <div className="absolute top-0 left-0 w-32 h-32 bg-hack-neonCyan/10 rounded-br-[100px] blur-2xl"></div>
             <div className="absolute bottom-0 right-0 w-32 h-32 bg-hack-neonPurple/10 rounded-tl-[100px] blur-2xl"></div>
-            
+
             {/* Dynamic Geometric Rings Animation */}
             <div className="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none overflow-hidden">
-               <div
-                  className="w-[800px] h-[800px] border-dashed border-2 border-hack-neonCyan/40 rounded-full absolute animate-[spin_30s_linear_infinite]"
-               />
-               <div
-                  className="w-[600px] h-[600px] border border-hack-neonPurple/30 rounded-full absolute animate-[spin_40s_linear_infinite_reverse]"
-               />
-               <div
-                  className="w-[400px] h-[400px] border border-hack-neonBlue/50 rounded-full absolute animate-pulse"
-               />
+              <div
+                className="w-[800px] h-[800px] border-dashed border-2 border-hack-neonCyan/40 rounded-full absolute animate-[spin_30s_linear_infinite]"
+              />
+              <div
+                className="w-[600px] h-[600px] border border-hack-neonPurple/30 rounded-full absolute animate-[spin_40s_linear_infinite_reverse]"
+              />
+              <div
+                className="w-[400px] h-[400px] border border-hack-neonBlue/50 rounded-full absolute animate-pulse"
+              />
             </div>
 
             <span className="text-hack-neonCyan font-mono tracking-[0.2em] font-bold text-sm md:text-base uppercase mb-4 relative z-10">Total Prize Pool</span>
-            
+
             <div className="relative z-10 flex items-start justify-center gap-2">
               <span className="text-3xl md:text-6xl font-bold text-gray-300 mt-2">₹</span>
               <h2 className="text-6xl sm:text-7xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-hack-neonCyan via-white to-hack-neonPurple tracking-tighter drop-shadow-[0_0_35px_rgba(0,240,255,0.8)] px-2">
                 15,000
               </h2>
             </div>
-            
+
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:animate-shimmer" />
           </div>
         </motion.div>
       </div>
 
       {/* Top 3 Podium */}
-      <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch gap-6 md:gap-4 lg:gap-8 mb-20 max-w-5xl mx-auto h-auto md:h-[400px]">
+      <div id="winners" className="flex flex-col md:flex-row justify-center items-center md:items-stretch gap-6 md:gap-4 lg:gap-8 mb-20 max-w-5xl mx-auto h-auto md:h-[400px]">
         {prizes.map((prize) => (
           <motion.div
             key={prize.title}
@@ -114,8 +117,13 @@ export function Prizes() {
                 {prize.icon}
               </div>
               <h3 className="text-4xl md:text-5xl font-black text-white mb-2 tracking-tight">{prize.amount}</h3>
-              <p className="text-sm md:text-base font-semibold text-gray-300 uppercase tracking-widest">{prize.title}</p>
-              
+              <p className="text-sm md:text-base font-semibold text-gray-300 uppercase tracking-widest mb-4">{prize.title}</p>
+
+              <div className="mt-2 p-2 px-4 rounded-lg bg-white/10 border border-white/10 backdrop-blur-sm">
+                <p className="text-[10px] text-hack-neonCyan uppercase font-black tracking-[0.2em] mb-1">Squad Secured</p>
+                <p className="text-lg font-bold text-white tracking-tight">{prize.winner}</p>
+              </div>
+
               {/* Shine effect */}
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer" />
             </div>

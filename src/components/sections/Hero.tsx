@@ -5,7 +5,7 @@ import { Button } from "../ui/Button";
 import { Section } from "../ui/Section";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Terminal } from "lucide-react";
+import { Terminal, Trophy } from "lucide-react";
 
 export function Hero() {
   const [timeLeft, setTimeLeft] = useState({
@@ -57,8 +57,8 @@ export function Hero() {
           className="flex justify-center mb-6"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-hack-neonCyan/30 text-hack-neonCyan text-sm font-medium">
-            <Terminal size={16} />
-            <span>Registrations Open Now</span>
+            <Trophy size={16} />
+            <span>Winners Announced!</span>
           </div>
         </motion.div>
 
@@ -154,13 +154,13 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <a href="/#shortlisted">
+          <a href="/#winners">
             <Button
               size="lg"
               variant="primary"
               className="w-full sm:w-auto min-w-[200px]"
             >
-              View Shortlisted Teams
+              View Winners
             </Button>
           </a>
           <a href="/#about">

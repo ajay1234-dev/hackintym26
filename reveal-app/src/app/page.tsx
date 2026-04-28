@@ -4,10 +4,10 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CountdownOverlay } from '@/components/CountdownOverlay';
 import { FlashEffect } from '@/components/FlashEffect';
-import { ProblemStatements } from '@/components/ProblemStatements';
-import { Sparkles, Terminal, ShieldCheck } from 'lucide-react';
+import { WinnersReveal } from '@/components/WinnersReveal';
+import { Sparkles, Terminal, ShieldCheck, Trophy } from 'lucide-react';
 
-type AppState = 'IDLE' | 'COUNTDOWN' | 'REVEALING' | 'UNLOCKED';
+type AppState = 'IDLE' | 'COUNTDOWN' | 'REVEALING' | 'ANNOUNCING' | 'UNLOCKED';
 
 export default function RevealPage() {
   const [state, setState] = useState<AppState>('IDLE');
@@ -19,7 +19,9 @@ export default function RevealPage() {
       timer = setTimeout(() => setCountdown(countdown - 1), 1000);
     } else if (state === 'COUNTDOWN' && countdown === 0) {
       setState('REVEALING');
-      setTimeout(() => setState('UNLOCKED'), 1000);
+      setTimeout(() => setState('ANNOUNCING'), 1000);
+    } else if (state === 'ANNOUNCING') {
+      timer = setTimeout(() => setState('UNLOCKED'), 8000);
     }
     return () => clearTimeout(timer);
   }, [state, countdown]);
@@ -45,6 +47,39 @@ export default function RevealPage() {
         )}
         {state === 'REVEALING' && (
           <FlashEffect />
+        )}
+        {state === 'ANNOUNCING' && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-hack-dark text-center px-4"
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="mb-8"
+            >
+              <Trophy size={100} className="text-hack-green drop-shadow-[0_0_20px_rgba(74,222,128,0.5)]" />
+            </motion.div>
+            <motion.h2
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-4xl md:text-6xl font-black text-white italic uppercase tracking-tighter"
+            >
+              The moment you've <br /> been waiting for...
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1 }}
+              className="text-hack-green mt-6 font-mono tracking-widest uppercase text-sm animate-pulse"
+            >
+              Finalizing global verification protocols
+            </motion.p>
+          </motion.div>
         )}
       </AnimatePresence>
 
@@ -76,7 +111,7 @@ export default function RevealPage() {
               className="text-gray-400 text-xl md:text-2xl max-w-2xl font-light mb-12"
             >
               The Arena is Ready. All core systems initialized.
-              Waiting for global deployment signal.
+              Waiting for final results deployment.
             </motion.p>
 
             <motion.button
@@ -91,7 +126,7 @@ export default function RevealPage() {
               <div className="absolute -inset-1 bg-gradient-to-r from-hack-green to-emerald-600 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative bg-hack-dark px-12 py-6 rounded-2xl border border-white/10 flex items-center gap-4 text-xl font-bold">
                 <Sparkles className="text-hack-green group-hover:animate-spin" />
-                INITIATE GLOBAL REVEAL
+                INITIATE WINNERS REVEAL
               </div>
             </motion.button>
           </div>
@@ -110,18 +145,17 @@ export default function RevealPage() {
                 className="inline-block relative"
               >
                 <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tight uppercase italic flex items-center justify-center gap-4">
-                  <Terminal className="text-hack-green" size={48} />
-                  ENTER THE <span className="text-hack-green text-glow-green">HACKINTYM'26 EVO</span>
+                  <Trophy className="text-hack-green" size={48} />
+                  THE HALL OF <span className="text-hack-green text-glow-green">VICTORS</span>
                 </h1>
                 <div className="h-1 w-full bg-gradient-to-r from-transparent via-hack-green to-transparent opacity-50" />
               </motion.div>
-              <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-                Problem statements for HACKINTYM'26 EVO have been declassified.
-                Choose your domain wisely hacker.
+              <p className="text-gray-400 mt-6 max-w-2xl mx-auto uppercase tracking-widest font-mono text-xs">
+                HACKINTYM'26 EVO Winners have been declassified.
               </p>
             </div>
 
-            <ProblemStatements />
+            <WinnersReveal />
           </motion.div>
         )}
       </div>
