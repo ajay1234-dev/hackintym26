@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CountdownOverlay } from '@/components/CountdownOverlay';
-import { FlashEffect } from '@/components/FlashEffect';
-import { WinnersReveal } from '@/components/WinnersReveal';
+import { CountdownOverlay } from '../components/CountdownOverlay';
+import { FlashEffect } from '../components/FlashEffect';
+import { WinnersReveal } from '../components/WinnersReveal';
 import { Sparkles, Terminal, ShieldCheck, Trophy } from 'lucide-react';
 
 type AppState = 'IDLE' | 'COUNTDOWN' | 'REVEALING' | 'ANNOUNCING' | 'UNLOCKED';
